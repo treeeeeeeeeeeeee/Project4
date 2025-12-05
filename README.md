@@ -36,25 +36,7 @@ PerformanceSdk
    ```kotlin
    implementation(project(":performance-sdk"))
    ```
-3. 在 `Application` 或首个 `Activity` 中初始化：
-   ```kotlin
-   class DemoApp : Application() {
-       override fun onCreate() {
-           super.onCreate()
-           PerformanceSdk.start(
-               application = this,
-               config = PerformanceConfig(
-                   smoothnessConfig = SmoothnessConfig(sampleWindowSeconds = 2) { metrics ->
-                       // TODO: 上传或展示 metrics
-                   },
-                   anrConfig = AnrConfig(timeoutMs = 4000) { event ->
-                       // TODO: 上报 ANR
-                   }
-               )
-           )
-       }
-   }
-   ```
+3. 在 `Application` 或首个 `Activity` 中初始化
 4. 在适当位置（例如 `Application.onTerminate` 或 `Activity.onDestroy`）调用 `PerformanceSdk.stop()` 以释放监听。
 
 ## 演示应用使用方式
