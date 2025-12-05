@@ -76,6 +76,8 @@ cd D:\app\Android_Studio_Project\project4
 
 编译成功后可通过 Android Studio 安装 `app` 模块进行体验。
 
+![效果预览](./preview.png)
+
 ## 后续扩展建议
 
 1. **更精细的流畅度指标准确性**：结合 `FrameMetricsAggregator`（API 24+）或 AndroidX `JankStats` 获取更全面的帧指标。
